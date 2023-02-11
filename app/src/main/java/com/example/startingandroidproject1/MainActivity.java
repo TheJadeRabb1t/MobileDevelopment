@@ -3,9 +3,11 @@ package com.example.startingandroidproject1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "StartingAndroidProject1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,5 +44,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Toast.makeText(this, "Resumed", Toast.LENGTH_SHORT).show();
+        Log.i(TAG, "Info msg");
+        Log.e(TAG, "Error msg");
+        Log.w(TAG, "Warning msg");
+        Log.d(TAG, "Debug msg");
+        Log.v(TAG, "Verbose msg");
     }
 }
